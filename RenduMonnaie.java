@@ -51,6 +51,8 @@ public Map<Float, Integer> renvoi_monnaie_map(float argent_depose){
 					{
 						mp_de_monnaies.put(en.getKey(), quotient);
 					en.setValue(0);//je vide la caisse de cette monnaie
+					reste=rest_division;
+
 					}
 					else{
 						mp_de_monnaies.put(en.getKey(), en.getValue());
