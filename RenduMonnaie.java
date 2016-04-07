@@ -13,14 +13,13 @@ public class RenduMonnaie {
 	public RenduMonnaie(){
 	}
 	
-	//pour cette méthode je peux utiliser while à la place de if
+	//pour cette mÃ©thode je peux utiliser while Ã  la place de if
 	//Integer i=m.getValue();
 	//i--;
 	//m.setValue(i);
 public Map<Float, Integer> renvoi_monnaie_map(float argent_depose){
 	Map<Float,Integer> mp=new HashMap<Float,Integer>();
 	Map<Float,Integer> mp_de_monnaies=new HashMap<Float,Integer>();
-
 	mp.put(2f, 2);
 	mp.put(1f, 5);
 	mp.put(0.5f, 1);
