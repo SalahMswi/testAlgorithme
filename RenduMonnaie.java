@@ -52,8 +52,18 @@ public static Map<Float, Integer> renvoi_monnaie_map(float argent_depose,Map<Flo
 			if(en.getValue()!=null){
 			if(reste>=en.getKey()){
 				rest_division=reste%en.getKey();
-				
-			
+				String str=String.valueOf(rest_division);
+				int lg=str.length();
+				if(lg>3){ 
+					//ici j'avais un problème qu'il prend le reste en float ex:
+					//si 6.2/2 alors le reste réel est 0.2 par contre il me donnait 0.1999
+					//du coup il faut convertie vers double et puisque mon reste est float
+					//alors pr que je puisse le mettre dans ma variable je le convertit en float
+					double f= (double)rest_division;
+					double d=Math.round(f*100.0)/100.0;
+					float f1=(float) d;
+					rest_division=f1;
+				}
 				int quotient=(int) (reste/en.getKey());
 				
 				if(rest_division==0f){
